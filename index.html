@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- my stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Ping coming soon page</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="hero">
+        <div class="hero__logo">
+          <img src="./images/logo.svg" alt="logo" />
+        </div>
+
+        <div class="hero__content">
+          <h1 class="hero__content__title">
+            We are launching <span>soon!</span>
+          </h1>
+          <p class="hero__content__get-notified">
+            Subscribe and get notified Notify Me
+          </p>
+        </div>
+
+        <div class="hero__email-group">
+          <input
+            id="email"
+            class="hero__email-group__email-input"
+            type="text"
+            placeholder="Your email address..."
+          />
+          <span
+            id="error-text"
+            class="hero__email-group__error hero__email-group__error--hide"
+          ></span>
+          <button id="notified-btn" class="hero__email-group__btn">
+            Notify Me
+          </button>
+        </div>
+
+        <div class="hero__illustration">
+          <img
+            src="./images/illustration-dashboard.png"
+            alt="dashboard illustration"
+          />
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer__socials">
+          <div class="footer__socials__link">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div class="footer__socials__link">
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+          <div class="footer__socials__link">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <p class="footer__copyrights">
+          &copy; Copyright Ping. All rights reserved.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/mgksp/">Prabu</a>.
+      </p>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
+

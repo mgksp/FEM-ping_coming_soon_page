@@ -1,0 +1,208 @@
+@use "reset";
+@use "breakpoints" as *;
+
+:root {
+  //primary colors
+  --blue: hsl(223, 87%, 63%);
+
+  //secondary colors
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+
+  //neutral colors
+  --gray: hsl(0, 0%, 59%);
+  --dkr-blue: hsl(209, 33%, 12%);
+
+  --blue-hover: hsl(223, 87%, 53%);
+  --blue-active: hsl(223, 87%, 58%);
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1.2rem;
+  color: var(--dkr-blue);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include breakpoint($first) {
+    font-size: 1.6rem;
+  }
+}
+
+.container {
+  padding-top: 8.4rem;
+  padding-inline: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 60rem;
+
+  max-width: 65rem;
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 12rem;
+
+  &__logo {
+    width: 5.4rem;
+    margin-bottom: 3.8rem;
+
+    @include breakpoint($first) {
+      width: 8.8rem;
+      margin-bottom: 4.8rem;
+    }
+  }
+
+  &__content {
+    &__title {
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: var(--gray);
+      margin-bottom: 1.6rem;
+
+      @include breakpoint($first) {
+        font-size: 4.8rem;
+      }
+
+      span {
+        font-weight: 700;
+        color: initial;
+      }
+    }
+
+    &__get-notified {
+      margin-bottom: 3.2rem;
+
+      @include breakpoint($first) {
+        font-size: 2rem;
+        margin-bottom: 4.2rem;
+      }
+    }
+  }
+
+  &__email-group {
+    margin-bottom: 7rem;
+    width: 90%;
+    display: grid;
+    gap: 1rem;
+
+    @include breakpoint($first) {
+      grid-template-columns: 2fr 1fr;
+      margin-bottom: 9rem;
+    }
+
+    &__email-input {
+      width: 100%;
+      padding: 1rem 2rem;
+      border-radius: 10rem;
+      border: 1px solid var(--pale-blue);
+      font-size: 1.2rem;
+      color: var(--dkr-blue);
+      outline: none;
+
+      &:focus {
+        border: 1px solid var(--blue);
+      }
+
+      &::placeholder {
+        color: var(--pale-blue);
+      }
+
+      @include breakpoint($first) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__error {
+      color: var(--light-red);
+      text-align: left;
+      margin-left: 2rem;
+      margin-top: -1rem;
+
+      @include breakpoint($first) {
+        grid-row-start: 2;
+      }
+
+      &--hide {
+        display: none;
+      }
+    }
+
+    &__btn {
+      background-color: var(--blue);
+      color: white;
+      border-radius: 10rem;
+      border: none;
+      outline: none;
+      width: 100%;
+      padding: 1rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+        rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+
+      &:hover {
+        background-color: var(--blue-hover);
+      }
+
+      &:active {
+        background-color: var(--blue-active);
+      }
+
+      @include breakpoint($first) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__illustration {
+    width: 100%;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__socials {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 2.4rem;
+
+    &__link {
+      height: 2.8rem;
+      width: 2.8rem;
+      border: 1px solid var(--pale-blue);
+      border-radius: 50%;
+      font-size: 1.6rem;
+      display: grid;
+      place-content: center;
+      color: var(--blue);
+    }
+  }
+
+  &__copyrights {
+    font-size: 1rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--dkr-blue);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+
+  a {
+    color: var(--blue);
+  }
+}
